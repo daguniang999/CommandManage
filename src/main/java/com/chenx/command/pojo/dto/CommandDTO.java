@@ -1,13 +1,18 @@
 package com.chenx.command.pojo.dto;
 
-import com.chenx.command.pojo.entity.Command;
 import com.chenx.command.pojo.entity.CommandArg;
+import lombok.Data;
+
 import java.util.List;
 
 /**
- * 命令DTO
- */
-public class CommandDTO extends Command {
+ * @ClassName CommandDTO
+ * @Description 命令DTO
+ * @Author daguniang
+ * @Date 2022/11/6 10:53
+ **/
+@Data
+public class CommandDTO {
 
     /**
      * 命令参数列表
@@ -22,4 +27,5 @@ public class CommandDTO extends Command {
     public void setCommandArgList(List<CommandArg> commandArgList) {
         this.commandArgList = commandArgList;
     }
+
 }

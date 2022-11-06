@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chenx.command.mapper.CommandArgMapper">
+
+    <resultMap id="BaseResultMap" type="com.chenx.command.pojo.entity.CommandArg">
+        <result column="arg_id" property="argId"></result>
+        <result column="command_id" property="commandId"></result>
+        <result column="short_name" property="shortName"></result>
+        <result column="full_name" property="fullName"></result>
+        <result column="description" property="description"></result>
+        <result column="create_time" property="createTime"></result>
+        <result column="update_time" property="updateTime"></result>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        arg_id, command_id, short_name, full_name, description, create_time, update_time
+    </sql>
+
+</mapper>

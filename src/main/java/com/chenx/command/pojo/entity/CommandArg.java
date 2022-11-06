@@ -1,24 +1,32 @@
 package com.chenx.command.pojo.entity;
 
+import lombok.Data;
+
+import java.util.Date;
+
 /**
- * 命令参数
- */
+ * @ClassName CommandArg
+ * @Description 命令参数
+ * @Author daguniang
+ * @Date 2022/11/6 10:53
+ **/
+@Data
 public class CommandArg {
 
     /**
-     * ID
+     * 命令参数ID
      */
-    private String id;
+    private Long argId;
 
     /**
      * 命令ID
      */
-    private String commandId;
+    private Long commandId;
 
     /**
      * 简称
      */
-    private String sortName;
+    private String shortName;
 
     /**
      * 全称
@@ -30,43 +38,14 @@ public class CommandArg {
      */
     private String description;
 
-    public String getId() {
-        return id;
-    }
+    /**
+     * 创建时间
+     */
+    private Date createTime;
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    /**
+     * 修改时间
+     */
+    private Date updateTime;
 
-    public String getSortName() {
-        return sortName;
-    }
-
-    public void setSortName(String sortName) {
-        this.sortName = sortName;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getCommandId() {
-        return commandId;
-    }
-
-    public void setCommandId(String commandId) {
-        this.commandId = commandId;
-    }
 }

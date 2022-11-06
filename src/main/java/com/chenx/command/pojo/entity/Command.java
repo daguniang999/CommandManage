@@ -1,17 +1,25 @@
 package com.chenx.command.pojo.entity;
 
+import lombok.Data;
+
+import java.util.Date;
+
 /**
- * 命令
- */
+ * @ClassName Command
+ * @Description 命令
+ * @Author daguniang
+ * @Date 2022/11/6 10:53
+ **/
+@Data
 public class Command {
 
     /**
-     * ID
+     * 命令ID
      */
-    private String id;
+    private Long commandId;
 
     /**
-     * 名称
+     * 命令名称
      */
     private String name;
 
@@ -20,28 +28,13 @@ public class Command {
      */
     private String description;
 
-    public String getId() {
-        return id;
-    }
+    /**
+     * 创建时间
+     */
+    private Date createTime;
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
 }
