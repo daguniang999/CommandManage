@@ -1,4 +1,4 @@
-package com.asteroid.command.manage.bean;
+package com.chenx.command.pojo.entity;
 
 /**
  * 命令参数

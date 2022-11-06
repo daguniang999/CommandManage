@@ -1,7 +1,7 @@
-package com.asteroid.command.manage.dto;
+package com.chenx.command.pojo.dto;
 
-import com.asteroid.command.manage.bean.Command;
-import com.asteroid.command.manage.bean.CommandArg;
+import com.chenx.command.pojo.entity.Command;
+import com.chenx.command.pojo.entity.CommandArg;
 import java.util.List;
 
 /**
