@@ -1,6 +1,9 @@
 server:
   port: 8001
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   flyway:
     enabled: true
   datasource:
@@ -11,3 +14,9 @@ spring:
 
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
+
+custom:
+  swagger:
+    enabled: true
+    basePackages:
+      - com.chenx.command

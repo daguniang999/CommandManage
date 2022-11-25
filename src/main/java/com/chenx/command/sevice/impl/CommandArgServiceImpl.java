@@ -14,4 +14,8 @@ import org.springframework.stereotype.Service;
  **/
 @Service
 public class CommandArgServiceImpl extends ServiceImpl<CommandArgMapper, CommandArg> implements CommandArgService {
+    @Override
+    public String test(Integer num, String name) {
+        return null;
+    }
 }
