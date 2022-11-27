@@ -1,4 +1,4 @@
-package com.chenx.command.sevice;
+package com.chenx.command.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.chenx.command.pojo.entity.EnvironmentVariable;

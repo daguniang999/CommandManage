@@ -2,11 +2,13 @@ package com.chenx.command.controller;
 
 import com.chenx.command.common.ResponseInfo;
 import com.chenx.command.facade.CommandFacade;
+import com.chenx.command.pojo.dto.CommandAddDTO;
 import com.chenx.command.pojo.dto.CommandDTO;
 import com.chenx.command.pojo.request.CommandRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,9 +33,10 @@ public class CommandController {
     }
 
     /**
-     * 根据条件获取命令列表
-     * @param request
-     * @return
+     * 获取列表
+     *
+     * @param request 筛选条件
+     * @return {@link ResponseInfo}<{@link List}<{@link CommandDTO}>>
      */
     @GetMapping
     public ResponseInfo<List<CommandDTO>> getList(CommandRequest request) {
@@ -42,9 +45,16 @@ public class CommandController {
         return ResponseInfo.success(dtoList);
     }
 
-    @GetMapping("/test")
-    public ResponseInfo getTest() {
-        return ResponseInfo.success();
+    /**
+     * 添加
+     *
+     * @param addDTO 添加DTO
+     * @return {@link ResponseInfo}
+     */
+    @PostMapping
+    public ResponseInfo add(CommandAddDTO addDTO) {
+        Boolean ok = commandFacade.add(addDTO);
+        return ok ? ResponseInfo.success() : ResponseInfo.fail();
     }
 
 }

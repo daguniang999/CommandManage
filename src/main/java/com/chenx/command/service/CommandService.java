@@ -1,6 +1,7 @@
-package com.chenx.command.sevice;
+package com.chenx.command.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.chenx.command.pojo.dto.CommandAddDTO;
 import com.chenx.command.pojo.dto.CommandDTO;
 import com.chenx.command.pojo.entity.Command;
 import com.chenx.command.pojo.request.CommandRequest;
@@ -21,4 +22,11 @@ public interface CommandService extends IService<Command> {
      * @return
      */
     List<CommandDTO> getDTOList(CommandRequest request);
+
+    /**
+     * 添加命令
+     * @param addDTO
+     * @return
+     */
+    Boolean add(CommandAddDTO addDTO);
 }

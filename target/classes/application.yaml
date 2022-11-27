@@ -14,6 +14,9 @@ spring:
     password: cxwCXW123
 
 mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: "classpath*:com/chenx/**/mapper/sql/*.xml"
 
 custom:

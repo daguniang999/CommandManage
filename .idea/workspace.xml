@@ -4,62 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73a5b85a-5420-4785-8248-58e8c091711d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/common/ResponseInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/common/ResponseStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/facade/CommandFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/facade/CommandGroupFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/CommandGroupMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/CommandGroupRelationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/CommandInstanceArgMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/CommandInstanceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/EnvironmentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/EnvironmentVariableMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/sql/CommandGroupMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/sql/CommandGroupRelationMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/sql/CommandInstanceArgMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/sql/CommandInstanceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/sql/EnvironmentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/sql/EnvironmentVariableMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandArgDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/entity/CommandGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/entity/CommandGroupRelation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/entity/CommandInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/entity/CommandInstanceArg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/entity/Environment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/entity/EnvironmentVariable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/request/CommandRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandGroupRelationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandGroupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandInstanceArgService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandInstanceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/EnvironmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/EnvironmentVariableService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandGroupRelationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandGroupServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandInstanceArgServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandInstanceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/EnvironmentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/EnvironmentVariableServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config/log/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config/mybatis/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/CommandApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/CommandApplication.java" afterDir="false" />
+    <list default="true" id="73a5b85a-5420-4785-8248-58e8c091711d" name="Changes" comment="K">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/common/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandAddDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandGroupAddDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandGroupRelationDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/controller/CommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/controller/CommandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/CommandArgMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/CommandArgMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/CommandMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/CommandMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/sql/CommandArgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/sql/CommandArgMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/sql/CommandMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/sql/CommandMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/facade/CommandFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/facade/CommandFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/facade/CommandGroupFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/facade/CommandGroupFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandArgDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandArgDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/entity/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/entity/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/entity/CommandArg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/entity/CommandArg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandArgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandArgService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandArgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandArgServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandArgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandArgService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandGroupRelationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandGroupRelationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandInstanceArgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandInstanceArgService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandInstanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandInstanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/EnvironmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/EnvironmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/EnvironmentVariableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/EnvironmentVariableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandArgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandArgServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandGroupRelationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandGroupRelationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandGroupServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandInstanceArgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandInstanceArgServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandInstanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandInstanceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/EnvironmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/EnvironmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/EnvironmentVariableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/EnvironmentVariableServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1.0.0__create_base.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1.0.0_20221116_01__DDL_init_chenxiaowei.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/log/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/log/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/mybatis/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chenx/command/controller/CommandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chenx/command/controller/CommandController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chenx/command/facade/CommandFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chenx/command/facade/CommandFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chenx/command/sevice/impl/CommandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chenx/command/sevice/impl/CommandServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/log/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/log/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/mybatis/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +50,8 @@
       <list>
         <option value="Mybatis Mapper" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -114,7 +93,8 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.29926336",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "com.star.easydoc.view.CommonConfigurable",
+    "spring.configuration.checksum": "ccbe0b01a8e109a7eaaffcafcc15de80"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -155,7 +135,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669430392838</updated>
-      <workItem from="1669430395006" duration="33464000" />
+      <workItem from="1669430395006" duration="36713000" />
+      <workItem from="1669543358539" duration="6727000" />
     </task>
     <servers />
   </component>
@@ -177,14 +158,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandServiceImpl.java</url>
-          <line>31</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandServiceImpl.java</url>
+          <line>37</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/chenx/command/controller/CommandController.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -5,10 +5,6 @@
     </encoder>
   </appender>
 
-  <logger name="com.chenx.command.mapper" level="info">
-    <appender-ref ref="STDOUT" />
-  </logger>
-
   <root level="info">
     <appender-ref ref="STDOUT" />
   </root>
