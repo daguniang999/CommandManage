@@ -1,8 +1,6 @@
 package com.chenx.command.pojo.dto;
 
-import com.chenx.command.pojo.entity.CommandArg;
 import lombok.Data;
-
 import java.util.List;
 
 /**
@@ -15,17 +13,23 @@ import java.util.List;
 public class CommandDTO {
 
     /**
+     * 命令ID
+     */
+    private Long commandId;
+
+    /**
+     * 命令名称
+     */
+    private String name;
+
+    /**
+     * 描述
+     */
+    private String description;
+
+    /**
      * 命令参数列表
      */
-    private List<CommandArg> commandArgList;
-
-
-    public List<CommandArg> getCommandArgList() {
-        return commandArgList;
-    }
-
-    public void setCommandArgList(List<CommandArg> commandArgList) {
-        this.commandArgList = commandArgList;
-    }
+    private List<CommandArgDTO> commandArgList;
 
 }

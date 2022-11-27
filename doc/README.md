@@ -20,81 +20,30 @@ These instructions will get you a copy of the project up and running on your loc
 Give examples
 ```
 
-### 安装
+### 功能前瞻
+- 可以通过命令行简单的将命令导入的库中
+- 有一个在线写shell, 在线写dockerfile的命令提示编辑器
+- 支持解析命令到入到库中
+- 支持vim的方式操作软件
+- 支持导入导出pdf等功能
+- 支持离线, 通过文件的方式存储结构
+- 支持在线修改命令用于使用, 一个小弹框编辑器 (支持vim编辑)
+- 支持环境变量配置, 可根据环境动态生成适用于本机的命令
 
-A step by step series of examples that tell you how to get a development env running
+### 命令格式
 
-Say what the step will be
+> 一般命令格式
 
-```
-Give the example
-```
+```shell    
+# 一般命令
+# ls -a /
+command [option] [arguments]
 
-And repeat
+# 一般命令参数合并
+ls -al /
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
+# 短格式/长格式
+ls -a /
+ls --all /
 
 ```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
-# *CommandManage*
-
-
-> 接口文档地址
-
-- localhost:8001/doc.html

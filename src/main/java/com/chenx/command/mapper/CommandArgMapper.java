@@ -5,7 +5,7 @@ import com.chenx.command.pojo.entity.CommandArg;
 
 /**
  * @ClassName CommandArgMapper
- * @Description TODO
+ * @Description 命令参数Mapper
  * @Author daguniang
  * @Date 2022/11/6 15:27
  **/

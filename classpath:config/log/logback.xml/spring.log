@@ -1,0 +1,155 @@
+2022-11-27 11:54:56.199  INFO 42370 --- [main] com.chenx.command.CommandApplication     : Starting CommandApplication using Java 1.8.0_345 on chenxiaoweideMac-mini-2.local with PID 42370 (/Users/daguniang/IDEASPACE/HOME/CommandManage/target/classes started by daguniang in /Users/daguniang/IDEASPACE/HOME/CommandManage)
+2022-11-27 11:54:56.200  INFO 42370 --- [main] com.chenx.command.CommandApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-11-27 11:54:56.816  INFO 42370 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2022-11-27 11:54:56.820  INFO 42370 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-27 11:54:56.821  INFO 42370 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-11-27 11:54:56.861  INFO 42370 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-27 11:54:56.861  INFO 42370 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 641 ms
+2022-11-27 11:54:56.961  WARN 42370 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.Command".
+2022-11-27 11:54:56.963  WARN 42370 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.Command ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:54:57.048  WARN 42370 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.CommandArg".
+2022-11-27 11:54:57.049  WARN 42370 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.CommandArg ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:54:57.066  WARN 42370 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.CommandGroupRelation".
+2022-11-27 11:54:57.066  WARN 42370 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.CommandGroupRelation ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:54:57.079  WARN 42370 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.CommandGroup".
+2022-11-27 11:54:57.079  WARN 42370 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.CommandGroup ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:54:57.092  WARN 42370 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.CommandInstanceArg".
+2022-11-27 11:54:57.092  WARN 42370 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.CommandInstanceArg ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:54:57.104  WARN 42370 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.CommandInstance".
+2022-11-27 11:54:57.104  WARN 42370 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.CommandInstance ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:54:57.116  WARN 42370 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.Environment".
+2022-11-27 11:54:57.116  WARN 42370 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.Environment ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:54:57.126  WARN 42370 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.EnvironmentVariable".
+2022-11-27 11:54:57.126  WARN 42370 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.EnvironmentVariable ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:54:57.251  INFO 42370 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-27 11:54:57.496  INFO 42370 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-27 11:54:57.642  INFO 42370 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-27 11:54:57.658  INFO 42370 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.0.5 by Redgate
+2022-11-27 11:54:57.659  INFO 42370 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/command-manage (MySQL 8.0)
+2022-11-27 11:54:57.681  INFO 42370 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.009s)
+2022-11-27 11:54:57.687  INFO 42370 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `command-manage`: 1.0.0.20221116.01
+2022-11-27 11:54:57.688  INFO 42370 --- [main] o.f.core.internal.command.DbMigrate      : Schema `command-manage` is up to date. No migration necessary.
+2022-11-27 11:54:57.746  INFO 42370 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2022-11-27 11:54:57.821  INFO 42370 --- [main] com.chenx.command.CommandApplication     : Started CommandApplication in 1.819 seconds (JVM running for 2.06)
+2022-11-27 11:54:57.955  INFO 42370 --- [RMI TCP Connection(2)-192.168.1.210] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-27 11:54:57.956  INFO 42370 --- [RMI TCP Connection(2)-192.168.1.210] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-27 11:54:57.957  INFO 42370 --- [RMI TCP Connection(2)-192.168.1.210] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-27 11:55:30.757  INFO 42370 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-27 11:55:30.760  INFO 42370 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-27 11:55:32.384  INFO 42385 --- [main] com.chenx.command.CommandApplication     : Starting CommandApplication using Java 1.8.0_345 on chenxiaoweideMac-mini-2.local with PID 42385 (/Users/daguniang/IDEASPACE/HOME/CommandManage/target/classes started by daguniang in /Users/daguniang/IDEASPACE/HOME/CommandManage)
+2022-11-27 11:55:32.386  INFO 42385 --- [main] com.chenx.command.CommandApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-11-27 11:55:33.010  INFO 42385 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2022-11-27 11:55:33.014  INFO 42385 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-27 11:55:33.014  INFO 42385 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-11-27 11:55:33.053  INFO 42385 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-27 11:55:33.053  INFO 42385 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 647 ms
+2022-11-27 11:55:33.153  WARN 42385 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.Command".
+2022-11-27 11:55:33.155  WARN 42385 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.Command ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:55:33.254  WARN 42385 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.CommandArg".
+2022-11-27 11:55:33.254  WARN 42385 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.CommandArg ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:55:33.272  WARN 42385 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.CommandGroupRelation".
+2022-11-27 11:55:33.272  WARN 42385 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.CommandGroupRelation ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:55:33.285  WARN 42385 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.CommandGroup".
+2022-11-27 11:55:33.285  WARN 42385 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.CommandGroup ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:55:33.298  WARN 42385 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.CommandInstanceArg".
+2022-11-27 11:55:33.298  WARN 42385 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.CommandInstanceArg ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:55:33.310  WARN 42385 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.CommandInstance".
+2022-11-27 11:55:33.310  WARN 42385 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.CommandInstance ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:55:33.321  WARN 42385 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.Environment".
+2022-11-27 11:55:33.321  WARN 42385 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.Environment ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:55:33.332  WARN 42385 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.chenx.command.pojo.entity.EnvironmentVariable".
+2022-11-27 11:55:33.332  WARN 42385 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.chenx.command.pojo.entity.EnvironmentVariable ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-11-27 11:55:33.458  INFO 42385 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-11-27 11:55:33.697  INFO 42385 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-27 11:55:33.845  INFO 42385 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-27 11:55:33.861  INFO 42385 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.0.5 by Redgate
+2022-11-27 11:55:33.861  INFO 42385 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/command-manage (MySQL 8.0)
+2022-11-27 11:55:33.884  INFO 42385 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.010s)
+2022-11-27 11:55:33.892  INFO 42385 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `command-manage`: 1.0.0.20221116.01
+2022-11-27 11:55:33.892  INFO 42385 --- [main] o.f.core.internal.command.DbMigrate      : Schema `command-manage` is up to date. No migration necessary.
+2022-11-27 11:55:33.954  INFO 42385 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2022-11-27 11:55:34.035  INFO 42385 --- [main] com.chenx.command.CommandApplication     : Started CommandApplication in 1.851 seconds (JVM running for 2.092)
+2022-11-27 11:55:34.134  INFO 42385 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-27 11:55:34.134  INFO 42385 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-27 11:55:34.135  INFO 42385 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-27 11:55:40.788  INFO 42385 --- [http-nio-8001-exec-1] c.c.c.controller.CommandController       : start
+2022-11-27 11:55:40.788  WARN 42385 --- [http-nio-8001-exec-1] c.c.c.controller.CommandController       : start
+2022-11-27 11:55:40.788 ERROR 42385 --- [http-nio-8001-exec-1] c.c.c.controller.CommandController       : start
+2022-11-27 11:55:40.805 ERROR 42385 --- [http-nio-8001-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.chenx.command.mapper.CommandMapper.getCommandId] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.chenx.command.mapper.CommandMapper.getCommandId
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235) ~[mybatis-3.5.10.jar:3.5.10]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50) ~[mybatis-plus-core-3.5.2.jar:3.5.2]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111) ~[mybatis-plus-core-3.5.2.jar:3.5.2]
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660) ~[na:1.8.0_345]
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115) ~[mybatis-plus-core-3.5.2.jar:3.5.2]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98) ~[mybatis-plus-core-3.5.2.jar:3.5.2]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy80.getCommandId(Unknown Source) ~[na:na]
+	at com.chenx.command.sevice.impl.CommandServiceImpl.getDTOList(CommandServiceImpl.java:30) ~[classes/:na]
+	at com.chenx.command.sevice.impl.CommandServiceImpl$$FastClassBySpringCGLIB$$611e29e5.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.20.jar:5.3.20]
+	at com.chenx.command.sevice.impl.CommandServiceImpl$$EnhancerBySpringCGLIB$$2e12ed77.getDTOList(<generated>) ~[classes/:na]
+	at com.chenx.command.controller.CommandController.getList(CommandController.java:48) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_345]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_345]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_345]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_345]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.63.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.63.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_345]
+
+2022-11-27 11:58:26.043  INFO 42385 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-27 11:58:26.047  INFO 42385 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

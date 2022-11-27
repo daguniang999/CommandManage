@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chenx.command.mapper.EnvironmentVariableMapper">
+    <resultMap id="BaseResultMap" type="com.chenx.command.pojo.entity.EnvironmentVariable">
+        <id column="env_variable_id" property="envVariableId"></id>
+        <result column="env_id" property="envId"></result>
+        <result column="name" property="name"></result>
+        <result column="value" property="value"></result>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        env_variable_id, env_id, name, value
+    </sql>
+</mapper>

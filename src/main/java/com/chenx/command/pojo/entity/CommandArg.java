@@ -1,8 +1,9 @@
 package com.chenx.command.pojo.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
-
-import java.util.Date;
 
 /**
  * @ClassName CommandArg
@@ -11,12 +12,14 @@ import java.util.Date;
  * @Date 2022/11/6 10:53
  **/
 @Data
+@TableName(value = "command_arg")
 public class CommandArg {
 
     /**
      * 命令参数ID
      */
-    private Long argId;
+    @TableId(value = "command_arg_id", type = IdType.ASSIGN_ID)
+    private Long commandArgId;
 
     /**
      * 命令ID
@@ -24,28 +27,28 @@ public class CommandArg {
     private Long commandId;
 
     /**
-     * 简称
+     * 参数名
      */
-    private String shortName;
+    private String name;
 
     /**
-     * 全称
+     * 参数类型
      */
-    private String fullName;
+    private Integer type;
+
+    /**
+     * 分隔符
+     */
+    private Integer symbol;
+
+    /**
+     * 顺序
+     */
+    private Integer sequence;
 
     /**
      * 描述
      */
     private String description;
-
-    /**
-     * 创建时间
-     */
-    private Date createTime;
-
-    /**
-     * 修改时间
-     */
-    private Date updateTime;
 
 }
