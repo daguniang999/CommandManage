@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="94abb2b5-c465-4266-abf3-69d59b3b0c17" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.gitingore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/config/SwaggerConfiguration.java" afterDir="false" />
@@ -16,6 +17,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandArgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandArgServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
 =======
+=======
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
     <list default="true" id="73a5b85a-5420-4785-8248-58e8c091711d" name="Changes" comment="K">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/common/Constant.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandAddDTO.java" afterDir="false" />
@@ -51,6 +54,9 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/chenx/command/sevice/impl/CommandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chenx/command/sevice/impl/CommandServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config/log/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/log/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/mybatis/mybatis-config.xml" afterDir="false" />
+<<<<<<< HEAD
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+=======
 >>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,10 +65,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
 =======
+=======
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -80,6 +89,9 @@
     <setting file="jar://$APPLICATION_HOME_DIR$/plugins/space/lib/space.jar!/logback.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.6.8/spring-boot-autoconfigure-2.6.8-sources.jar!/org/springframework/boot/autoconfigure/logging/ConditionEvaluationReportLoggingListener.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+<<<<<<< HEAD
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+=======
 >>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -91,6 +103,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <component name="ProjectId" id="2I1rVWsJ8whF1TVnTPFGDA0Hg5K" />
   <component name="ProjectViewState">
@@ -112,6 +125,8 @@
   <component name="RebelAgentSelection">
     <selection>jr</selection>
 =======
+=======
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
   <component name="ProjectId" id="2I4AH34Qsdl3t6tfjlSzZvMeOzc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -146,12 +161,19 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.chenx.command.mapper" />
     </key>
+<<<<<<< HEAD
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+=======
 >>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
   </component>
   <component name="RunManager">
     <configuration name="CommandApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="CommandManage" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chenx.command.CommandApplication" />
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
 =======
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.chenx.command.CommandApplication" />
 >>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
@@ -162,7 +184,10 @@
         </pattern>
       </extension>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.chenx.command.CommandApplication" />
+=======
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
 =======
 >>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
       <method v="2">
@@ -179,6 +204,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <changelist id="94abb2b5-c465-4266-abf3-69d59b3b0c17" name="Changes" comment="" />
       <created>1669359958016</created>
       <option name="number" value="Default" />
@@ -187,6 +213,8 @@
       <workItem from="1669359959654" duration="1197000" />
       <workItem from="1669361244188" duration="8990000" />
 =======
+=======
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
       <changelist id="73a5b85a-5420-4785-8248-58e8c091711d" name="Changes" comment="" />
       <created>1669430392838</created>
       <option name="number" value="Default" />
@@ -194,6 +222,9 @@
       <updated>1669430392838</updated>
       <workItem from="1669430395006" duration="36713000" />
       <workItem from="1669543358539" duration="6727000" />
+<<<<<<< HEAD
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+=======
 >>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
     </task>
     <servers />
@@ -202,7 +233,10 @@
     <option name="version" value="3" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -234,5 +268,8 @@
       <FILTER>com.chenx.command.*</FILTER>
     </SUITE>
   </component>
+<<<<<<< HEAD
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+=======
 >>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
 </project>
