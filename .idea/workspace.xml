@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="94abb2b5-c465-4266-abf3-69d59b3b0c17" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitingore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/config/SwaggerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/config/properties/SwaggerProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/controller/CommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/controller/CommandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandArgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandArgService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandArgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandArgServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+=======
+    <list default="true" id="73a5b85a-5420-4785-8248-58e8c091711d" name="Changes" comment="K">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/common/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandAddDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandGroupAddDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandGroupRelationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/controller/CommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/controller/CommandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/facade/CommandFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/facade/CommandFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/facade/CommandGroupFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/facade/CommandGroupFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandArgDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandArgDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/pojo/dto/CommandDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandArgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandArgService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandGroupRelationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandGroupRelationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandInstanceArgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandInstanceArgService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandInstanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandInstanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/CommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/EnvironmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/EnvironmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/EnvironmentVariableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/EnvironmentVariableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandArgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandArgServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandGroupRelationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandGroupRelationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandGroupServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandInstanceArgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandInstanceArgServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandInstanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandInstanceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/CommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/EnvironmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/EnvironmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chenx/command/sevice/impl/EnvironmentVariableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/EnvironmentVariableServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/log/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/log/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/mybatis/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chenx/command/controller/CommandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chenx/command/controller/CommandController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chenx/command/facade/CommandFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chenx/command/facade/CommandFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chenx/command/sevice/impl/CommandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chenx/command/sevice/impl/CommandServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/log/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/log/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/mybatis/mybatis-config.xml" afterDir="false" />
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+<<<<<<< HEAD
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Mybatis Mapper" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$APPLICATION_HOME_DIR$/plugins/space/lib/space.jar!/logback.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.6.8/spring-boot-autoconfigure-2.6.8-sources.jar!/org/springframework/boot/autoconfigure/logging/ConditionEvaluationReportLoggingListener.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+<<<<<<< HEAD
+  <component name="ProjectId" id="2I1rVWsJ8whF1TVnTPFGDA0Hg5K" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+=======
+  <component name="ProjectId" id="2I4AH34Qsdl3t6tfjlSzZvMeOzc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/daguniang/IDEASPACE/HOME/CommandManage/src/main/resources",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.29926336",
+    "settings.editor.selected.configurable": "com.star.easydoc.view.CommonConfigurable",
+    "spring.configuration.checksum": "ccbe0b01a8e109a7eaaffcafcc15de80"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/chenx/command/mapper/sql" />
+      <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.chenx.command.mapper" />
+    </key>
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+  </component>
+  <component name="RunManager">
+    <configuration name="CommandApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="CommandManage" />
+<<<<<<< HEAD
+=======
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chenx.command.CommandApplication" />
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chenx.command.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+<<<<<<< HEAD
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chenx.command.CommandApplication" />
+=======
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.CommandApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="94abb2b5-c465-4266-abf3-69d59b3b0c17" name="Changes" comment="" />
+      <created>1669359958016</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669359958016</updated>
+      <workItem from="1669359959654" duration="1197000" />
+      <workItem from="1669361244188" duration="8990000" />
+=======
+      <changelist id="73a5b85a-5420-4785-8248-58e8c091711d" name="Changes" comment="" />
+      <created>1669430392838</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669430392838</updated>
+      <workItem from="1669430395006" duration="36713000" />
+      <workItem from="1669543358539" duration="6727000" />
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+<<<<<<< HEAD
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chenx/command/service/impl/CommandServiceImpl.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CommandManage$CommandApplication.ic" NAME="CommandApplication Coverage Results" MODIFIED="1669537726246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.chenx.command.*</FILTER>
+    </SUITE>
+  </component>
+>>>>>>> 9eeebc9633b566fb952b8cccdbffe016b0fcd297
+</project>
