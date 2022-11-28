@@ -10,8 +10,5 @@
         <module name="CommandManage" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="CommandManage" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
