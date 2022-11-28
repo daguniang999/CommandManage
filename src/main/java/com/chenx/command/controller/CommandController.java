@@ -7,13 +7,12 @@ import com.chenx.command.pojo.dto.CommandDTO;
 import com.chenx.command.pojo.request.CommandRequest;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,7 +30,7 @@ public class CommandController {
 
     CommandFacade commandFacade;
 
-    @ApiImplicitParam(name = "commandFacade", value = "", defaultValue = "", allowableValues = "", dataTypeClass = CommandFacade.class)
+    @ApiImplicitParam(name = "commandFacade", value = "")
     @ApiOperation(value = "", notes = "", tags = {}, httpMethod = "")
     @Autowired
     public void setCommandFacade(CommandFacade commandFacade) {
@@ -44,7 +43,7 @@ public class CommandController {
      * @param request 筛选条件
      * @return {@link ResponseInfo}<{@link List}<{@link CommandDTO}>>
      */
-    @ApiImplicitParam(name = "request", value = "筛选条件", defaultValue = "", allowableValues = "", dataTypeClass = CommandRequest.class)
+    @ApiImplicitParam(name = "request", value = "筛选条件")
     @ApiOperation(value = "获取列表", notes = "", tags = {}, httpMethod = "GET")
     @GetMapping
     public ResponseInfo<List<CommandDTO>> getList(CommandRequest request) {
@@ -59,10 +58,10 @@ public class CommandController {
      * @param addDTO 添加DTO
      * @return {@link ResponseInfo}
      */
-    @ApiImplicitParam(name = "addDTO", value = "添加DTO", defaultValue = "", allowableValues = "", dataTypeClass = CommandAddDTO.class)
+    @ApiImplicitParam(name = "addDTO", value = "添加DTO")
     @ApiOperation(value = "添加", notes = "", tags = {}, httpMethod = "POST")
     @PostMapping
-    public ResponseInfo add(CommandAddDTO addDTO) {
+    public ResponseInfo add(@RequestBody CommandAddDTO addDTO) {
         Boolean ok = commandFacade.add(addDTO);
         return ok ? ResponseInfo.success() : ResponseInfo.fail();
     }
