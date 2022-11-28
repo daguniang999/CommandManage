@@ -1,5 +1,6 @@
 package com.chenx.command.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chenx.command.mapper.CommandGroupRelationMapper;
 import com.chenx.command.pojo.dto.CommandGroupRelationDTO;
@@ -11,6 +12,7 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @ClassName CommandGroupRelationServiceImpl
@@ -25,7 +27,6 @@ public class CommandGroupRelationServiceImpl extends ServiceImpl<CommandGroupRel
 
     @Override
     public Boolean addRelation(List<CommandGroupRelationDTO> dtoList) {
-
         if (CollectionUtils.isEmpty(dtoList)) {
             return true;
         }
@@ -43,6 +44,61 @@ public class CommandGroupRelationServiceImpl extends ServiceImpl<CommandGroupRel
         return ok;
     }
 
+    /**
+     * 按命令id删除
+     *
+     * @param commandIds 命令id
+     * @return {@link Boolean}
+     */
+    @Override
+    public Boolean deleteByCommandId(List<Long> commandIds) {
+        if (CollectionUtils.isEmpty(commandIds)) {
+            return true;
+        }
+
+        LambdaQueryWrapper<CommandGroupRelation> wrapper = new LambdaQueryWrapper<>();
+        wrapper.in(CommandGroupRelation::getCommandId, commandIds)
+                .select(CommandGroupRelation::getGroupRelationId);
+        List<CommandGroupRelation> relationList = getBaseMapper().selectList(wrapper);
+        List<Long> ids = relationList.stream().map(CommandGroupRelation::getGroupRelationId).collect(Collectors.toList());
+        return delete(ids);
+    }
+
+    /**
+     * 按组id删除
+     *
+     * @param groupIds 组id
+     * @return {@link Boolean}
+     */
+    @Override
+    public Boolean deleteByGroupId(List<Long> groupIds) {
+        if (CollectionUtils.isEmpty(groupIds)) {
+            return true;
+        }
+        LambdaQueryWrapper<CommandGroupRelation> wrapper = new LambdaQueryWrapper<>();
+        wrapper.in(CommandGroupRelation::getGroupId, groupIds)
+                .select(CommandGroupRelation::getGroupRelationId);
+        List<CommandGroupRelation> relationList = getBaseMapper().selectList(wrapper);
+        List<Long> ids = relationList.stream().map(CommandGroupRelation::getGroupRelationId)
+                .collect(Collectors.toList());
+
+        return delete(ids);
+    }
+
+    /**
+     * 删除
+     *
+     * @param ids id
+     * @return {@link Boolean}
+     */
+    private Boolean delete(List<Long> ids) {
+        if (CollectionUtils.isEmpty(ids)) {
+            return true;
+        }
+
+        getBaseMapper().deleteBatchIds(ids);
+        return true;
+    }
 
     /**
      * DTO 2 DO

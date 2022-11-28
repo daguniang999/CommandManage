@@ -2,14 +2,11 @@ package com.chenx.command.controller;
 
 import com.chenx.command.common.ResponseInfo;
 import com.chenx.command.facade.CommandFacade;
-import com.chenx.command.pojo.dto.CommandAddDTO;
 import com.chenx.command.pojo.dto.CommandDTO;
 import com.chenx.command.pojo.request.CommandRequest;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,8 +27,6 @@ public class CommandController {
 
     CommandFacade commandFacade;
 
-    @ApiImplicitParam(name = "commandFacade", value = "")
-    @ApiOperation(value = "", notes = "", tags = {}, httpMethod = "")
     @Autowired
     public void setCommandFacade(CommandFacade commandFacade) {
         this.commandFacade = commandFacade;
@@ -61,9 +56,36 @@ public class CommandController {
     @ApiImplicitParam(name = "addDTO", value = "添加DTO")
     @ApiOperation(value = "添加", notes = "", tags = {}, httpMethod = "POST")
     @PostMapping
-    public ResponseInfo add(@RequestBody CommandAddDTO addDTO) {
+    public ResponseInfo add(@RequestBody CommandDTO addDTO) {
         Boolean ok = commandFacade.add(addDTO);
         return ok ? ResponseInfo.success() : ResponseInfo.fail();
     }
 
+    /**
+     * 编辑
+     *
+     * @param editDTO 编辑DTO
+     * @return {@link ResponseInfo}
+     */
+    @ApiImplicitParam(name = "editDTO", value = "编辑DTO")
+    @ApiOperation(value = "编辑", notes = "", tags = {}, httpMethod = "PUT")
+    @PutMapping
+    public ResponseInfo edit(@RequestBody CommandDTO editDTO) {
+        Boolean ok = commandFacade.edit(editDTO);
+        return ok ? ResponseInfo.success() : ResponseInfo.fail();
+    }
+
+    /**
+     * 删除
+     *
+     * @param id id
+     * @return {@link ResponseInfo}
+     */
+    @ApiImplicitParam(name = "id", value = "id")
+    @ApiOperation(value = "删除", notes = "", tags = {}, httpMethod = "DELETE")
+    @DeleteMapping("/{id}")
+    public ResponseInfo delete(@PathVariable("id") Long id) {
+        Boolean ok = commandFacade.delete(id);
+        return ok ? ResponseInfo.success() : ResponseInfo.fail();
+    }
 }

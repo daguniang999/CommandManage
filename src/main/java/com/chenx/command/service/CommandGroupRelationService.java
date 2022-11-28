@@ -22,4 +22,20 @@ public interface CommandGroupRelationService extends IService<CommandGroupRelati
      * @return {@link Boolean}
      */
     Boolean addRelation(List<CommandGroupRelationDTO> list);
+
+    /**
+     * 按命令id删除
+     *
+     * @param commandIds 命令id
+     * @return {@link Boolean}
+     */
+    Boolean deleteByCommandId(List<Long> commandIds);
+
+    /**
+     * 按组id删除
+     *
+     * @param groupIds 组id
+     * @return {@link Boolean}
+     */
+    Boolean deleteByGroupId(List<Long> groupIds);
 }

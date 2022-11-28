@@ -1,5 +1,6 @@
 package com.chenx.command.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chenx.command.mapper.CommandArgMapper;
 import com.chenx.command.pojo.dto.CommandArgDTO;
@@ -11,6 +12,7 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @ClassName CommandArgServiceImpl
@@ -22,6 +24,12 @@ import java.util.List;
 @Transactional(rollbackFor = Exception.class)
 public class CommandArgServiceImpl extends ServiceImpl<CommandArgMapper, CommandArg> implements CommandArgService {
 
+    /**
+     * 批量添加
+     *
+     * @param argList 参数列表
+     * @return {@link Boolean}
+     */
     @Override
     public Boolean addBatch(List<CommandArgDTO> argList) {
         if (CollectionUtils.isEmpty(argList)) {
@@ -42,7 +50,57 @@ public class CommandArgServiceImpl extends ServiceImpl<CommandArgMapper, Command
         return ok;
     }
 
+
     /**
+     * 删除通过id
+     *
+     * @param ids id
+     * @return {@link Boolean}
+     */
+    @Override
+    public Boolean deleteById(List<Long> ids) {
+        if (CollectionUtils.isEmpty(ids)) {
+            return true;
+        }
+        return delete(ids);
+    }
+
+    /**
+     * 按命令id删除
+     *
+     * @param commandIds 命令id
+     * @return {@link Boolean}
+     */
+    @Override
+    public Boolean deleteByCommandId(List<Long> commandIds) {
+        if (CollectionUtils.isEmpty(commandIds)) {
+            return true;
+        }
+        LambdaQueryWrapper<CommandArg> wrapper = new LambdaQueryWrapper<CommandArg>()
+                .in(CommandArg::getCommandId, commandIds)
+                .select(CommandArg::getCommandArgId);
+        List<CommandArg> commandArgs = getBaseMapper().selectList(wrapper);
+        List<Long> ids = commandArgs.stream().map(CommandArg::getCommandArgId).collect(Collectors.toList());
+        return delete(ids);
+    }
+
+    /**
+     * 删除
+     *
+     * @param ids id
+     * @return {@link Boolean}
+     */
+    private Boolean delete(List<Long> ids) {
+        if (CollectionUtils.isEmpty(ids)) {
+            return true;
+        }
+        getBaseMapper().deleteBatchIds(ids);
+        return true;
+    }
+
+
+    /**
+     * DTO 2 DO
      * DTO 2 DO
      *
      * @param source 源对象

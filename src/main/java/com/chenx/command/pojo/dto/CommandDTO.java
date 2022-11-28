@@ -1,6 +1,5 @@
 package com.chenx.command.pojo.dto;
 
-import com.chenx.command.pojo.dto.CommandArgDTO;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -35,6 +34,12 @@ public class CommandDTO {
      */
     @ApiModelProperty(value = "描述", required = true)
     private String description;
+
+    /**
+     * 分组ID
+     */
+    @ApiModelProperty(value = "分组ID", required = true)
+    private Long groupId;
 
     /**
      * 命令参数列表

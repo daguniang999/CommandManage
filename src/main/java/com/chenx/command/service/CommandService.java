@@ -17,16 +17,26 @@ import java.util.List;
 public interface CommandService extends IService<Command> {
 
     /**
-     * 获取命令DTO列表
-     * @param request
-     * @return
+     * 获取dtolist
+     *
+     * @param request 筛选条件
+     * @return {@link List}<{@link CommandDTO}>
      */
     List<CommandDTO> getDTOList(CommandRequest request);
 
     /**
-     * 添加命令
-     * @param addDTO
-     * @return
+     * 删除通过id
+     *
+     * @param ids id
+     * @return {@link Boolean}
      */
-    Boolean add(CommandAddDTO addDTO);
+    Boolean deleteById(List<Long> ids);
+
+    /**
+     * 按组id删除
+     *
+     * @param groupIds 组id
+     * @return {@link Boolean}
+     */
+    Boolean deleteByGroupId(List<Long> groupIds);
 }
