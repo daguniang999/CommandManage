@@ -1,6 +1,7 @@
 package com.chenx.command.facade;
 
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 /**
  * @ClassName CommandGroupFacade
@@ -8,7 +9,7 @@ import lombok.Data;
  * @Author daguniang
  * @Date 2022/11/27 09:11
  **/
-@Data
+@Component
 public class CommandGroupFacade {
 
 }
