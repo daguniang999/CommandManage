@@ -7,9 +7,12 @@
         <result column="command_arg_id" property="commandArgId"></result>
         <result column="value" property="value"></result>
         <result column="default_value" property="defaultValue"></result>
+        <result column="instance_id" property="instanceId"></result>
+        <result column="type" property="type"></result>
+        <result column="sequence" property="sequence"></result>
     </resultMap>
 
     <sql id="Base_Column_List">
-        instance_arg_id, command_arg_id, value, default_value
+        instance_arg_id, command_arg_id, value, default_value, instance_id, type, sequence
     </sql>
 </mapper>

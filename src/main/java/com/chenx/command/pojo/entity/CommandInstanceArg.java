@@ -26,10 +26,28 @@ public class CommandInstanceArg {
     private Long instanceArgId;
 
     /**
+     * 实例id
+     */
+    @ApiModelProperty(value = "实例id", required = true)
+    private Long instanceId;
+
+    /**
      * 命令参数ID
      */
     @ApiModelProperty(value = "命令参数ID", required = true)
     private Long commandArgId;
+
+    /**
+     * 类型
+     */
+    @ApiModelProperty(value = "类型", required = true)
+    private Integer type;
+
+    /**
+     * 顺序
+     */
+    @ApiModelProperty(value = "顺序", required = true)
+    private Integer sequence;
 
     /**
      * 参数值

@@ -17,12 +17,20 @@ import java.util.List;
 public interface CommandService extends IService<Command> {
 
     /**
-     * 获取dtolist
+     * 获取对象List
      *
      * @param request 筛选条件
      * @return {@link List}<{@link CommandDTO}>
      */
     List<CommandDTO> getDTOList(CommandRequest request);
+
+    /**
+     * 根据ID获取dto
+     *
+     * @param id id
+     * @return {@link CommandDTO}
+     */
+    CommandDTO getDTOById(Long id);
 
     /**
      * 删除通过id

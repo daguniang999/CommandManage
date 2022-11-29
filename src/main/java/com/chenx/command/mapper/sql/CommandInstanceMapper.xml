@@ -4,10 +4,11 @@
     <resultMap id="BaseResultMap" type="com.chenx.command.pojo.entity.CommandInstance">
         <id column="instance_id" property="instanceId"></id>
         <result column="command_id" property="commandId"></result>
+        <result column="name" property="name"></result>
         <result column="description" property="description"></result>
     </resultMap>
 
     <sql id="Base_Column_List">
-        instance_id, command_id, description
+        instance_id, command_id, description, name
     </sql>
 </mapper>

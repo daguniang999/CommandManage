@@ -19,7 +19,7 @@ import java.util.List;
  * @Author daguniang
  * @Date 2022/11/6 10:56
  **/
-@Api(value = "/command", tags = {""})
+@Api(value = "/command")
 @RestController
 @RequestMapping("/command")
 @Slf4j
@@ -38,7 +38,6 @@ public class CommandController {
      * @param request 筛选条件
      * @return {@link ResponseInfo}<{@link List}<{@link CommandDTO}>>
      */
-    @ApiImplicitParam(name = "request", value = "筛选条件")
     @ApiOperation(value = "获取列表", notes = "", tags = {}, httpMethod = "GET")
     @GetMapping
     public ResponseInfo<List<CommandDTO>> getList(CommandRequest request) {

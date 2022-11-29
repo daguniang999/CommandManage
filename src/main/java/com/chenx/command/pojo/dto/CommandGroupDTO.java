@@ -10,15 +10,21 @@ import lombok.Data;
  * @Author daguniang
  * @Date 2022/11/27 23:20
  **/
-@ApiModel(description = "")
+@ApiModel(description = "命令分组对象")
 @Data
-public class CommandGroupAddDTO {
+public class CommandGroupDTO {
 
     /**
      * 命令分组ID
      */
     @ApiModelProperty(value = "命令分组ID", required = true)
-    private Long commandGroupId;
+    private Long groupId;
+
+    /**
+     * 命令分组父ID
+     */
+    @ApiModelProperty(value = "命令分组父ID", required = true)
+    private Long parentGroupId;
 
     /**
      * 分组名称

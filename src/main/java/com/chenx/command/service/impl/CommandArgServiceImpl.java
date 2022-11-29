@@ -84,6 +84,28 @@ public class CommandArgServiceImpl extends ServiceImpl<CommandArgMapper, Command
         return delete(ids);
     }
 
+
+    /**
+     * 批处理更新
+     *
+     * @param argList 参数列表
+     * @return {@link Boolean}
+     */
+    @Override
+    public Boolean updateBatch(List<CommandArgDTO> argList) {
+        if (CollectionUtils.isEmpty(argList)) {
+            return true;
+        }
+
+        List<CommandArg> list = new ArrayList<>();
+        for (CommandArgDTO item : argList) {
+            CommandArg newItem = new CommandArg();
+            convertDTO2DO(item, newItem);
+            list.add(newItem);
+        }
+        return updateBatchById(list);
+    }
+
     /**
      * 删除
      *

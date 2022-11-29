@@ -1,28 +1,25 @@
-package com.chenx.command.pojo.entity;
+package com.chenx.command.pojo.dto;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.util.List;
+
 /**
- * @ClassName CommandGroupService
- * @Description 命令分组
- * @Author daguniang
- * @Date 2022/11/26 15:56
+ * @ClassName CommandGroupTree
+ * @Description 命令分组树
+ * @Author chenxiaowei
+ * @Date 2022/11/29 13:38
  **/
-@ApiModel(description = "命令分组DO")
 @Data
-@TableName("command_group")
-public class CommandGroup {
+@ApiModel(description = "命令分组树")
+public class CommandGroupTree {
 
     /**
      * 命令分组ID
      */
     @ApiModelProperty(value = "命令分组ID", required = true)
-    @TableId(value = "group_id", type = IdType.ASSIGN_ID)
     private Long groupId;
 
     /**
@@ -42,4 +39,11 @@ public class CommandGroup {
      */
     @ApiModelProperty(value = "分组描述", required = true)
     private String description;
+
+    /**
+     * 分组子节点
+     */
+    @ApiModelProperty(value = "分组子节点")
+    private List<CommandGroupTree> children;
+
 }

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -68,6 +69,24 @@ public class CommandServiceImpl extends ServiceImpl<CommandMapper, Command> impl
     public Boolean deleteByGroupId(List<Long> groupIds) {
         // TODO 根据分组删除命令
         return true;
+    }
+
+    /**
+     * 获取对象根据ID
+     *
+     * @param id id
+     * @return {@link CommandDTO}
+     */
+    @Override
+    public CommandDTO getDTOById(Long id) {
+        if (id == null) {
+            return null;
+        }
+        List<CommandDTO> list = getList(Collections.singletonList(id));
+        if (list != null && list.size() > 0) {
+            return list.get(0);
+        }
+        return null;
     }
 
     /**

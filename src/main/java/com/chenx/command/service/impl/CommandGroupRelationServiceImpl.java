@@ -60,7 +60,8 @@ public class CommandGroupRelationServiceImpl extends ServiceImpl<CommandGroupRel
         wrapper.in(CommandGroupRelation::getCommandId, commandIds)
                 .select(CommandGroupRelation::getGroupRelationId);
         List<CommandGroupRelation> relationList = getBaseMapper().selectList(wrapper);
-        List<Long> ids = relationList.stream().map(CommandGroupRelation::getGroupRelationId).collect(Collectors.toList());
+        List<Long> ids = relationList.stream().map(CommandGroupRelation::getGroupRelationId)
+            .collect(Collectors.toList());
         return delete(ids);
     }
 
@@ -107,7 +108,8 @@ public class CommandGroupRelationServiceImpl extends ServiceImpl<CommandGroupRel
      * @param target 目标对象
      * @return {@link CommandGroupRelation}
      */
-    private CommandGroupRelation convertDTO2DO(CommandGroupRelationDTO source, CommandGroupRelation target) {
+    private CommandGroupRelation convertDTO2DO(CommandGroupRelationDTO source,
+        CommandGroupRelation target) {
         if (source == null || target == null) {
             return target;
         }

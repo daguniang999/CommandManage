@@ -23,6 +23,14 @@ public interface CommandArgService extends IService<CommandArg> {
     Boolean addBatch(List<CommandArgDTO> argList);
 
     /**
+     * 批处理更新
+     *
+     * @param argList 参数列表
+     * @return {@link Boolean}
+     */
+    Boolean updateBatch(List<CommandArgDTO> argList);
+
+    /**
      * 删除通过id
      *
      * @param ids id

@@ -31,6 +31,13 @@ public class CommandInstance {
     @ApiModelProperty(value = "命令ID", required = true)
     private Long commandId;
 
+
+    /**
+     * 名称
+     */
+    @ApiModelProperty(value = "名称", required = true)
+    private String name;
+
     /**
      * 命令实例描述
      */

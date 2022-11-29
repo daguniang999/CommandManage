@@ -24,6 +24,7 @@ create table `command_arg` (
 drop table if exists `command_group`;
 create table `command_group` (
     `group_id` bigint not null comment '命令分组ID',
+    `parent_group_id` bigint not null comment '命令分组父ID',
     `name` varchar(50) not null comment '分组名称',
     `description` varchar(255) default null comment '分组描述',
     primary key (`group_id`)
@@ -43,6 +44,7 @@ drop table if exists `command_instance`;
 create table `command_instance` (
     `instance_id` bigint not null comment '命令实例ID',
     `command_id` bigint not null comment '命令ID',
+    `name` varchar(50) not null comment '命令实例名称',
     `description` varchar(255) default null comment '命令实例描述',
     primary key (`instance_id`)
 ) engine=InnoDB default charset=utf8mb4 collate=utf8mb4_0900_ai_ci;
@@ -51,7 +53,10 @@ create table `command_instance` (
 drop table if exists `command_instance_arg`;
 create table `command_instance_arg` (
     `instance_arg_id` bigint not null comment '命令实例参数ID',
-    `command_arg_id` bigint not null comment '命令参数ID',
+    `instance_id` bigint not null comment '命令实例ID',
+    `type` tinyint(4) not null comment '参数类型',
+    `sequence` int(11) not null comment '顺序',
+    `command_arg_id` bigint default null comment '命令参数ID',
     `value` varchar(255) default null comment '参数值',
     `default_value` varchar(255) default null comment '参数默认值',
     primary key (`instance_arg_id`)

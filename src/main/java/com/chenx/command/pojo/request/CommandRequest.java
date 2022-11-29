@@ -17,7 +17,7 @@ public class CommandRequest {
     /**
      * 分组ID
      */
-    @ApiModelProperty(value = "分组ID", name = "", required = true)
+    @ApiModelProperty(value = "分组ID", name = "", required = false)
     private Long groupId;
 
 }

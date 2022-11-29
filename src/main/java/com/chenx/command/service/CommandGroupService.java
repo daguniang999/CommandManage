@@ -1,8 +1,10 @@
 package com.chenx.command.service;
 
 
+import cn.hutool.core.lang.tree.Tree;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.chenx.command.pojo.dto.CommandGroupAddDTO;
+import com.chenx.command.pojo.dto.CommandGroupDTO;
+import com.chenx.command.pojo.dto.CommandGroupTree;
 import com.chenx.command.pojo.entity.CommandGroup;
 
 import java.util.List;
@@ -21,5 +23,20 @@ public interface CommandGroupService extends IService<CommandGroup> {
      * @param addList 添加DTO
      * @return {@link Boolean}
      */
-    Boolean addGroup(List<CommandGroupAddDTO> addList);
+    Boolean addGroup(List<CommandGroupDTO> addList);
+
+    /**
+     * 获取分组树
+     *
+     * @return {@link List}<{@link CommandGroupTree}>
+     */
+    List<Tree<String>> getGroupTree();
+
+    /**
+     * 删除根据id
+     *
+     * @param ids id
+     * @return {@link Boolean}
+     */
+    Boolean deleteById(List<Long> ids);
 }

@@ -1,6 +1,7 @@
 package com.chenx.command.facade;
 
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
+import com.chenx.command.pojo.dto.CommandArgDTO;
 import com.chenx.command.pojo.dto.CommandDTO;
 import com.chenx.command.pojo.dto.CommandGroupRelationDTO;
 import com.chenx.command.pojo.entity.Command;
@@ -13,6 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * @ClassName CommandFacade
@@ -98,27 +101,41 @@ public class CommandFacade {
         Long commandId = editDTO.getCommandId();
         List<Long> commandIds = Collections.singletonList(commandId);
 
-        // 删除历史命令
-        commandService.deleteById(commandIds);
+        // 新命令参数
+        List<CommandArgDTO> argList = Optional.ofNullable(editDTO.getCommandArgList()).orElse(Collections.emptyList());
+        List<Long> argIds = argList.stream().map(CommandArgDTO::getCommandArgId).collect(Collectors.toList());
+        // 获取历史命令
+        CommandDTO oldCommandDTO = commandService.getDTOById(commandId);
+        List<CommandArgDTO> oldArgList = Optional.ofNullable(oldCommandDTO.getCommandArgList())
+            .orElse(Collections.emptyList());
 
-        // 插入命令
-        editDTO.setCommandId(commandId);
+        // 需要删除的参数ID
+        List<Long> deleteArgIds = oldArgList.stream().map(CommandArgDTO::getCommandArgId).collect(Collectors.toList());
+        deleteArgIds.removeAll(argIds);
+
+        // 需要更新的参数
+        List<CommandArgDTO> updateArgList = argList.stream().filter(item -> item.getCommandArgId() != null)
+            .collect(Collectors.toList());
+
+        // 需要新增的参数
+        List<CommandArgDTO> addArgList = argList.stream().filter(item -> item.getCommandArgId() == null)
+            .collect(Collectors.toList());
+
+        // 更新命令
         Command command = new Command();
         convertDO2DTO(editDTO, command);
-        Boolean ok = commandService.save(command);
+        commandService.updateById(command);
 
-        // 插入命令参数
-        commandArgService.addBatch(editDTO.getCommandArgList());
+        // 更新命令参数
+        commandArgService.updateBatch(updateArgList);
 
-        // 插入命令分组关联
-        Long groupId = editDTO.getGroupId();
-        if (groupId != null) {
-            CommandGroupRelationDTO relationDTO = new CommandGroupRelationDTO();
-            relationDTO.setCommandId(commandId);
-            relationDTO.setGroupId(groupId);
-            commandGroupRelationService.addRelation(Collections.singletonList(relationDTO));
-        }
-        return ok;
+        // 新增命令参数
+        commandArgService.addBatch(addArgList);
+
+        // 删除命令参数
+        commandArgService.deleteById(deleteArgIds);
+
+        return true;
     }
 
     /**
