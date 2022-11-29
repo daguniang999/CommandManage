@@ -75,3 +75,13 @@ create table `environment_variable` (
     `value` varchar(255) default null comment '变量值',
     primary key (`env_variable_id`)
 ) engine=InnoDB default charset=utf8mb4 collate=utf8mb4_0900_ai_ci;
+
+-- 回收站
+drop table if exists `recycle`;
+create table `recycle` (
+    `recycle_id` bigint not null comment '回收ID',
+    `type` tinyint(4) not null comment '类型',
+    `json` json not null comment '删除数据结构',
+    `time` datetime not null comment '删除时间',
+    primary key (`recycle_id`)
+) engine=InnoDB default charset=utf8mb4 collate=utf8mb4_0900_ai_ci;
