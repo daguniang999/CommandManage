@@ -4,15 +4,20 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chenx.command.mapper.CommandGroupRelationMapper;
 import com.chenx.command.pojo.dto.CommandGroupRelationDTO;
+import com.chenx.command.pojo.entity.Command;
 import com.chenx.command.pojo.entity.CommandGroupRelation;
 import com.chenx.command.service.CommandGroupRelationService;
+import com.chenx.command.service.CommandGroupService;
+import com.chenx.command.service.CommandService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @ClassName CommandGroupRelationServiceImpl
@@ -87,6 +92,46 @@ public class CommandGroupRelationServiceImpl extends ServiceImpl<CommandGroupRel
     }
 
     /**
+     * 获取dto根据命令id
+     *
+     * @param commandIds 命令id
+     * @return {@link List}<{@link CommandGroupRelationDTO}>
+     */
+    @Override
+    public List<CommandGroupRelationDTO> getDTOByCommandId(List<Long> commandIds) {
+        if (CollectionUtils.isEmpty(commandIds)) {
+            return Collections.emptyList();
+        }
+        LambdaQueryWrapper<CommandGroupRelation> wrapper = new LambdaQueryWrapper<>();
+        wrapper.in(CommandGroupRelation::getCommandId, commandIds)
+            .select(CommandGroupRelation::getGroupRelationId);
+        List<CommandGroupRelation> relationList = getBaseMapper().selectList(wrapper);
+        List<Long> ids = relationList.stream().map(CommandGroupRelation::getGroupRelationId)
+            .collect(Collectors.toList());
+        return getList(ids);
+    }
+
+    /**
+     * 获取dto根据分组id
+     *
+     * @param groupIds 分组id
+     * @return {@link List}<{@link CommandGroupRelationDTO}>
+     */
+    @Override
+    public List<CommandGroupRelationDTO> getDTOByGroupId(List<Long> groupIds) {
+        if (CollectionUtils.isEmpty(groupIds)) {
+            return Collections.emptyList();
+        }
+        LambdaQueryWrapper<CommandGroupRelation> wrapper = new LambdaQueryWrapper<>();
+        wrapper.in(CommandGroupRelation::getGroupId, groupIds)
+            .select(CommandGroupRelation::getGroupRelationId);
+        List<CommandGroupRelation> relationList = getBaseMapper().selectList(wrapper);
+        List<Long> ids = relationList.stream().map(CommandGroupRelation::getGroupRelationId)
+            .collect(Collectors.toList());
+        return getList(ids);
+    }
+
+    /**
      * 删除
      *
      * @param ids id
@@ -99,6 +144,27 @@ public class CommandGroupRelationServiceImpl extends ServiceImpl<CommandGroupRel
 
         getBaseMapper().deleteBatchIds(ids);
         return true;
+    }
+
+    /**
+     * 获取列表
+     *
+     * @param ids id
+     * @return {@link List}<{@link CommandGroupRelationDTO}>
+     */
+    private List<CommandGroupRelationDTO> getList(List<Long> ids) {
+        List<CommandGroupRelationDTO> list = new ArrayList<>();
+        if (CollectionUtils.isEmpty(ids)) {
+            return list;
+        }
+
+        List<CommandGroupRelation> commandGroupRelations = getBaseMapper().selectBatchIds(ids);
+        for (CommandGroupRelation item : commandGroupRelations) {
+            CommandGroupRelationDTO newItem = new CommandGroupRelationDTO();
+            convertDO2DTO(item, newItem);
+            list.add(newItem);
+        }
+        return list;
     }
 
     /**
@@ -118,4 +184,23 @@ public class CommandGroupRelationServiceImpl extends ServiceImpl<CommandGroupRel
         target.setGroupId(source.getGroupId());
         return target;
     }
+
+    /**
+     * 转换 DO 2 DTO
+     *
+     * @param source 源
+     * @param target 目标
+     * @return {@link CommandGroupRelationDTO}
+     */
+    private CommandGroupRelationDTO convertDO2DTO(CommandGroupRelation source,
+        CommandGroupRelationDTO target) {
+        if (source == null || target == null) {
+            return target;
+        }
+        target.setGroupRelationId(source.getGroupRelationId());
+        target.setCommandId(source.getCommandId());
+        target.setGroupId(source.getGroupId());
+        return target;
+    }
+
 }

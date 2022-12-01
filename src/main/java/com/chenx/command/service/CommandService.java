@@ -1,7 +1,6 @@
 package com.chenx.command.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.chenx.command.pojo.dto.CommandAddDTO;
 import com.chenx.command.pojo.dto.CommandDTO;
 import com.chenx.command.pojo.entity.Command;
 import com.chenx.command.pojo.request.CommandRequest;

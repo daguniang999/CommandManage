@@ -1,8 +1,8 @@
 package com.chenx.command.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.chenx.command.pojo.dto.CommandArgDTO;
 import com.chenx.command.pojo.entity.CommandArg;
+import com.chenx.command.pojo.form.CommandArgForm;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public interface CommandArgService extends IService<CommandArg> {
      * @param argList 参数列表
      * @return {@link Boolean}
      */
-    Boolean addBatch(List<CommandArgDTO> argList);
+    Boolean addBatch(List<CommandArgForm> argList);
 
     /**
      * 批处理更新
@@ -28,7 +28,7 @@ public interface CommandArgService extends IService<CommandArg> {
      * @param argList 参数列表
      * @return {@link Boolean}
      */
-    Boolean updateBatch(List<CommandArgDTO> argList);
+    Boolean updateBatch(List<CommandArgForm> argList);
 
     /**
      * 删除通过id

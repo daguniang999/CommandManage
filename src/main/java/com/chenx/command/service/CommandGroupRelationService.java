@@ -38,4 +38,20 @@ public interface CommandGroupRelationService extends IService<CommandGroupRelati
      * @return {@link Boolean}
      */
     Boolean deleteByGroupId(List<Long> groupIds);
+
+    /**
+     * 获取dto根据命令id
+     *
+     * @param commandIds 命令id
+     * @return {@link List}<{@link CommandGroupRelationDTO}>
+     */
+    List<CommandGroupRelationDTO> getDTOByCommandId(List<Long> commandIds);
+
+    /**
+     * 获取dto根据分组id
+     *
+     * @param groupIds 分组id
+     * @return {@link List}<{@link CommandGroupRelationDTO}>
+     */
+    List<CommandGroupRelationDTO> getDTOByGroupId(List<Long> groupIds);
 }

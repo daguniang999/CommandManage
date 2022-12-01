@@ -18,19 +18,16 @@
             c.command_id
         from
             command c
-<!--        join command_group_relation cgr on-->
-<!--            cgr.command_id = c.command_id-->
-<!--        join command_group cg on-->
-<!--            cg.group_id = cgr.group_id-->
-<!--        left join command_arg ca on-->
-<!--            ca.command_id = c.command_id-->
-<!--        <where>-->
-<!--            <if test="request.groupId != null">-->
-<!--                cg.group_id = #{request.groupId}-->
-<!--            </if>-->
-<!--        </where>-->
-    </select>
-    <select id="test" resultType="java.lang.Long">
-        select 1
+        join command_group_relation cgr on
+            cgr.command_id = c.command_id
+        join command_group cg on
+            cg.group_id = cgr.group_id
+        left join command_arg ca on
+            ca.command_id = c.command_id
+        <where>
+            <if test="request.groupId != null">
+                cg.group_id = #{request.groupId}
+            </if>
+        </where>
     </select>
 </mapper>

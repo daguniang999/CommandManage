@@ -3,7 +3,9 @@ package com.chenx.command.controller;
 import com.chenx.command.common.ResponseInfo;
 import com.chenx.command.facade.CommandFacade;
 import com.chenx.command.pojo.dto.CommandDTO;
+import com.chenx.command.pojo.form.CommandForm;
 import com.chenx.command.pojo.request.CommandRequest;
+import com.chenx.command.pojo.vo.CommandVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -40,37 +42,37 @@ public class CommandController {
      */
     @ApiOperation(value = "获取列表", notes = "", tags = {}, httpMethod = "GET")
     @GetMapping
-    public ResponseInfo<List<CommandDTO>> getList(CommandRequest request) {
+    public ResponseInfo<List<CommandVO>> getList(CommandRequest request) {
         //  根据Request获取命令列表
-        List<CommandDTO> dtoList = commandFacade.getList(request);
-        return ResponseInfo.success(dtoList);
+        List<CommandVO> voList = commandFacade.getList(request);
+        return ResponseInfo.success(voList);
     }
 
     /**
      * 添加
      *
-     * @param addDTO 添加DTO
+     * @param form 添加DTO
      * @return {@link ResponseInfo}
      */
     @ApiImplicitParam(name = "addDTO", value = "添加DTO")
     @ApiOperation(value = "添加", notes = "", tags = {}, httpMethod = "POST")
     @PostMapping
-    public ResponseInfo add(@RequestBody CommandDTO addDTO) {
-        Boolean ok = commandFacade.add(addDTO);
+    public ResponseInfo add(@RequestBody CommandForm form) {
+        Boolean ok = commandFacade.add(form);
         return ok ? ResponseInfo.success() : ResponseInfo.fail();
     }
 
     /**
      * 编辑
      *
-     * @param editDTO 编辑DTO
+     * @param form 编辑DTO
      * @return {@link ResponseInfo}
      */
     @ApiImplicitParam(name = "editDTO", value = "编辑DTO")
     @ApiOperation(value = "编辑", notes = "", tags = {}, httpMethod = "PUT")
     @PutMapping
-    public ResponseInfo edit(@RequestBody CommandDTO editDTO) {
-        Boolean ok = commandFacade.edit(editDTO);
+    public ResponseInfo edit(@RequestBody CommandForm form) {
+        Boolean ok = commandFacade.edit(form);
         return ok ? ResponseInfo.success() : ResponseInfo.fail();
     }
 

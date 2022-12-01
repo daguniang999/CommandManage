@@ -32,7 +32,7 @@ public class CommandGroupController {
      * @return {@link ResponseInfo}<{@link CommandGroupTree}>
      */
     @ApiOperation(value = "获取分组树", notes = "")
-    @GetMapping
+    @GetMapping("/tree")
     public ResponseInfo<List<Tree<String>>> tree() {
         List<Tree<String>> groupTree = commandGroupFacade.getGroupTree();
         return ResponseInfo.success(groupTree);

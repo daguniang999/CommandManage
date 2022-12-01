@@ -36,15 +36,15 @@ public class CommandDTO {
     private String description;
 
     /**
-     * 分组ID
-     */
-    @ApiModelProperty(value = "分组ID", required = true)
-    private Long groupId;
-
-    /**
      * 命令参数列表
      */
     @ApiModelProperty(value = "命令参数列表", required = true)
     private List<CommandArgDTO> commandArgList;
+
+    /**
+     * 分组信息
+     */
+    @ApiModelProperty(value = "分组信息", required = true)
+    private CommandGroupDTO commandGroupDTO;
 
 }

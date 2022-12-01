@@ -1,4 +1,4 @@
-package com.chenx.command.pojo.dto;
+package com.chenx.command.pojo.form;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -7,14 +7,14 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @ClassName CommandAddDTO
- * @Description 命令添加DTO
- * @Author daguniang
- * @Date 2022/11/27 17:58
+ * @ClassName CommandForm
+ * @Description 命令表单
+ * @Author chenxiaowei
+ * @Date 2022/11/30 09:59
  **/
-@ApiModel(description = "命令添加对象")
+@ApiModel(description = "命令表单")
 @Data
-public class CommandAddDTO {
+public class CommandForm {
 
     /**
      * 命令ID
@@ -35,15 +35,14 @@ public class CommandAddDTO {
     private String description;
 
     /**
-     * 命令组ID
+     * 分组ID
      */
-    @ApiModelProperty(value = "命令组ID", required = true)
+    @ApiModelProperty(value = "分组ID", required = true)
     private Long groupId;
 
     /**
      * 命令参数列表
      */
     @ApiModelProperty(value = "命令参数列表", required = true)
-    private List<CommandArgDTO> commandArgList;
-
+    private List<CommandArgForm> commandArgList;
 }

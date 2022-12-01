@@ -23,6 +23,4 @@ public interface CommandMapper extends BaseMapper<Command> {
      * @return 命令ID集合
      */
     List<Long> getCommandId(@Param("request") CommandRequest request);
-
-    Long test();
 }

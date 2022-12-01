@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chenx.command.mapper.CommandArgMapper;
 import com.chenx.command.pojo.dto.CommandArgDTO;
 import com.chenx.command.pojo.entity.CommandArg;
+import com.chenx.command.pojo.form.CommandArgForm;
 import com.chenx.command.service.CommandArgService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,7 +32,7 @@ public class CommandArgServiceImpl extends ServiceImpl<CommandArgMapper, Command
      * @return {@link Boolean}
      */
     @Override
-    public Boolean addBatch(List<CommandArgDTO> argList) {
+    public Boolean addBatch(List<CommandArgForm> argList) {
         if (CollectionUtils.isEmpty(argList)) {
             return true;
         }
@@ -39,9 +40,9 @@ public class CommandArgServiceImpl extends ServiceImpl<CommandArgMapper, Command
         List<CommandArg> list = new ArrayList<>();
 
         // 参数转换
-        for (CommandArgDTO item : argList) {
+        for (CommandArgForm item : argList) {
             CommandArg newItem = new CommandArg();
-            convertDTO2DO(item, newItem);
+            convertForm2DO(item, newItem);
             list.add(newItem);
         }
 
@@ -92,15 +93,15 @@ public class CommandArgServiceImpl extends ServiceImpl<CommandArgMapper, Command
      * @return {@link Boolean}
      */
     @Override
-    public Boolean updateBatch(List<CommandArgDTO> argList) {
+    public Boolean updateBatch(List<CommandArgForm> argList) {
         if (CollectionUtils.isEmpty(argList)) {
             return true;
         }
 
         List<CommandArg> list = new ArrayList<>();
-        for (CommandArgDTO item : argList) {
+        for (CommandArgForm item : argList) {
             CommandArg newItem = new CommandArg();
-            convertDTO2DO(item, newItem);
+            convertForm2DO(item, newItem);
             list.add(newItem);
         }
         return updateBatchById(list);
@@ -129,7 +130,7 @@ public class CommandArgServiceImpl extends ServiceImpl<CommandArgMapper, Command
      * @param target 目标对象
      * @return {@link CommandArg}
      */
-    private CommandArg convertDTO2DO(CommandArgDTO source, CommandArg target) {
+    private CommandArg convertForm2DO(CommandArgForm source, CommandArg target) {
         if (source == null || target == null) {
             return target;
         }

@@ -5,13 +5,18 @@ import com.chenx.command.pojo.dto.CommandArgDTO;
 import com.chenx.command.pojo.dto.CommandDTO;
 import com.chenx.command.pojo.dto.CommandGroupRelationDTO;
 import com.chenx.command.pojo.entity.Command;
+import com.chenx.command.pojo.form.CommandArgForm;
+import com.chenx.command.pojo.form.CommandForm;
 import com.chenx.command.pojo.request.CommandRequest;
+import com.chenx.command.pojo.vo.CommandVO;
 import com.chenx.command.service.CommandArgService;
 import com.chenx.command.service.CommandGroupRelationService;
 import com.chenx.command.service.CommandGroupService;
 import com.chenx.command.service.CommandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -60,34 +65,42 @@ public class CommandFacade {
      * @param request 筛选条件
      * @return {@link List}<{@link CommandDTO}>
      */
-    public List<CommandDTO> getList(CommandRequest request) {
+    public List<CommandVO> getList(CommandRequest request) {
+        List<CommandVO> list = new ArrayList<>();
+
         //  根据Request获取命令列表
         List<CommandDTO> dtoList = commandService.getDTOList(request);
-        return dtoList;
+
+        for (CommandDTO item : dtoList) {
+            CommandVO newItem = new CommandVO();
+            convertDTO2VO(item, newItem);
+            list.add(newItem);
+        }
+        return list;
     }
 
 
     /**
      * 添加
      *
-     * @param addDTO 添加DTO
+     * @param form 添加DTO
      * @return {@link Boolean}
      */
-    public Boolean add(CommandDTO addDTO) {
+    public Boolean add(CommandForm form) {
 
         Long commandId = IdWorker.getId();
 
         // 插入命令
-        addDTO.setCommandId(commandId);
+        form.setCommandId(commandId);
         Command command = new Command();
-        convertDO2DTO(addDTO, command);
+        convertForm2DO(form, command);
         Boolean ok = commandService.save(command);
 
         // 插入命令参数
-        commandArgService.addBatch(addDTO.getCommandArgList());
+        commandArgService.addBatch(form.getCommandArgList());
 
         // 插入命令分组关联
-        Long groupId = addDTO.getGroupId();
+        Long groupId = form.getGroupId();
         if (groupId != null) {
             CommandGroupRelationDTO relationDTO = new CommandGroupRelationDTO();
             relationDTO.setCommandId(commandId);
@@ -97,13 +110,13 @@ public class CommandFacade {
         return ok;
     }
 
-    public Boolean edit(CommandDTO editDTO) {
-        Long commandId = editDTO.getCommandId();
+    public Boolean edit(CommandForm form) {
+        Long commandId = form.getCommandId();
         List<Long> commandIds = Collections.singletonList(commandId);
 
         // 新命令参数
-        List<CommandArgDTO> argList = Optional.ofNullable(editDTO.getCommandArgList()).orElse(Collections.emptyList());
-        List<Long> argIds = argList.stream().map(CommandArgDTO::getCommandArgId).collect(Collectors.toList());
+        List<CommandArgForm> argList = Optional.ofNullable(form.getCommandArgList()).orElse(Collections.emptyList());
+        List<Long> argIds = argList.stream().map(CommandArgForm::getCommandArgId).collect(Collectors.toList());
         // 获取历史命令
         CommandDTO oldCommandDTO = commandService.getDTOById(commandId);
         List<CommandArgDTO> oldArgList = Optional.ofNullable(oldCommandDTO.getCommandArgList())
@@ -114,16 +127,16 @@ public class CommandFacade {
         deleteArgIds.removeAll(argIds);
 
         // 需要更新的参数
-        List<CommandArgDTO> updateArgList = argList.stream().filter(item -> item.getCommandArgId() != null)
+        List<CommandArgForm> updateArgList = argList.stream().filter(item -> item.getCommandArgId() != null)
             .collect(Collectors.toList());
 
         // 需要新增的参数
-        List<CommandArgDTO> addArgList = argList.stream().filter(item -> item.getCommandArgId() == null)
+        List<CommandArgForm> addArgList = argList.stream().filter(item -> item.getCommandArgId() == null)
             .collect(Collectors.toList());
 
         // 更新命令
         Command command = new Command();
-        convertDO2DTO(editDTO, command);
+        convertForm2DO(form, command);
         commandService.updateById(command);
 
         // 更新命令参数
@@ -155,13 +168,32 @@ public class CommandFacade {
      * @param target 目标对象
      * @return {@link Command}
      */
-    private Command convertDO2DTO(CommandDTO source, Command target) {
+    private Command convertForm2DO(CommandForm source, Command target) {
         if (source == null || target == null) {
             return target;
         }
         target.setCommandId(source.getCommandId());
         target.setName(source.getName());
         target.setDescription(source.getDescription());
+        return target;
+    }
+
+    /**
+     * 转换 DTO 2 VO
+     *
+     * @param source 源
+     * @param target 目标
+     * @return {@link CommandVO}
+     */
+    private CommandVO convertDTO2VO(CommandDTO source, CommandVO target) {
+        if (source == null || target == null) {
+            return target;
+        }
+        target.setCommandId(source.getCommandId());
+        target.setName(source.getName());
+        target.setDescription(source.getDescription());
+        target.setCommandArgList(source.getCommandArgList());
+        target.setCommandGroupDTO(source.getCommandGroupDTO());
         return target;
     }
 }

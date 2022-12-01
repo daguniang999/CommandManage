@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chenx.command.common.Constant;
 import com.chenx.command.mapper.CommandMapper;
 import com.chenx.command.pojo.dto.CommandDTO;
+import com.chenx.command.pojo.dto.CommandGroupRelationDTO;
 import com.chenx.command.pojo.entity.Command;
 import com.chenx.command.pojo.request.CommandRequest;
 import com.chenx.command.service.CommandArgService;
@@ -17,6 +18,7 @@ import org.springframework.util.CollectionUtils;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @ClassName CommandServiceImpl
@@ -101,6 +103,12 @@ public class CommandServiceImpl extends ServiceImpl<CommandMapper, Command> impl
 
         // 批量获取命令列表数据
         List<Command> commands = getBaseMapper().selectBatchIds(ids);
+
+        // 根据命令ID获取分组信息
+        List<CommandGroupRelationDTO> relationDTOList = commandGroupRelationService.getDTOByCommandId(ids);
+        List<Long> groupIds = relationDTOList.stream().map(CommandGroupRelationDTO::getGroupId)
+            .collect(Collectors.toList());
+
 
         // 填充参数
         for (Command item : commands) {

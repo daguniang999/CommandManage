@@ -31,4 +31,10 @@ public class CommandGroupRelationDTO {
      */
     @ApiModelProperty(value = "分组ID", required = true)
     private Long groupId;
+
+    /**
+     * 命令分组对象
+     */
+    @ApiModelProperty(value = "命令分组对象", required = true)
+    private CommandGroupDTO commandGroupDTO;
 }
